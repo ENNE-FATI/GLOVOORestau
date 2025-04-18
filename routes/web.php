@@ -1,17 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -43,6 +34,30 @@ Route::get('/restaurant/2', function () {
 Route::get('/restaurant/3', function () {
     return view('restaurent3');
 })->name('restaurant.three');
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/signup', [AuthController::class, 'showSignupForm'])->name('signup.form');
+Route::post('/signup', [AuthController::class, 'register'])->name('signup');
+
+Route::get('/signin', [AuthController::class, 'showSigninForm'])->name('signin.form');
+Route::post('/signin', [AuthController::class, 'login'])->name('signin');
+
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth')->name('dashboard');
+
 
 // Route for the "Sale 50%" link. Since it's an anchor link (#about),
 // it likely points to a section on the homepage. We don't need a

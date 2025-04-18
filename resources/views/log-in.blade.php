@@ -5,82 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-    <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style2.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-free-6.1.2-web/css/all.css">
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
+    <link rel="shortcut icon" href="{{ asset('img/favicon.svg') }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ asset('assets/css/css/normalize.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/css/style2.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/css/fontawesome-free-6.1.2-web/css/all.css') }}">
+<link rel="shortcut icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
 
 </head>
 <body> 
     <div class="container ">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="" class="sign-in-form">
-                    <h2 class="title">Sign in</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="UserName">
-                    </div>
 
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password">
+                <!--    signup                            -->
 
-                    </div>
-                    <input type="submit" value="Login" class="btn solid">
-
-                    <h1>
-                        <a href="index.html" class="logo"> <-BACL TO HOME<span class="span">.</span></a>
-                      </h1>
-                 
-                    <p class="social-text">Or Sign in with social Platforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
-                    </div>
-                </form>
-
-
-                <form action="" class="sign-up-form">
+                <form action="{{ route('signup') }}" method="POST" class="sign-up-form">
+                    @csrf
+                
                     <h2 class="title">Sign up</h2>
+                
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="UserName">
+                        <input type="text" name="name" placeholder="UserName" required>
                     </div>
-
-
+                
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email   ">
-
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
-
+                
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" name="password" placeholder="Password" required>
                     </div>
-
+                
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
                     </div>
+                
                     <input type="submit" value="Sign up" class="btn solid">
-
+                
                     <h1>
-                        <a href="index.html" class="logo"> <-BACL TO HOME<span class="span">.</span></a>
-                      </h1>
-
-                    <p class="social-text">Or Sign up with social Platforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
-                    </div>
+                        <a href="{{ route('home') }}" class="logo"><- BACK TO HOME<span class="span">.</span></a>
+                    </h1>
                 </form>
+                
+                
+<!--    login                            -->
+
+<form action="{{ route('signin') }}" method="POST" class="sign-in-form">
+    @csrf
+                    <h2 class="title">Sign in</h2>
+                
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                
+                    <input type="submit" value="Login" class="btn solid">
+                </form>
+                
 
 
             </div>
@@ -111,7 +102,7 @@
 
 
 
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/js/main.js') }}"></script>
     
 </body>
 </html>
