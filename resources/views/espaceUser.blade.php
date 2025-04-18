@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>User Profile - Bistro Soleil</title>
+  <title>User Profile</title>
   <link rel="stylesheet" href="user.css">
   <style>body {
     font-family: Arial, sans-serif;
