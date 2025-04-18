@@ -63,9 +63,7 @@
                         <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurant</a>
                     </li>
             
-                    <li class="nav-item">
-                        <a href="{{ route('book-table') }}" class="navbar-link" data-nav-link>Book-Table</a>
-                    </li>
+                    
             
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="navbar-link" data-nav-link>Home</a>
@@ -209,41 +207,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section class="section section-divider white blog" id="blog">
         <div class="container">
             <h2 class="h2 section-title text-center">
@@ -340,7 +303,7 @@
                                 more...
                             </p>
 
-                            <a href=href="{{ route('restaurant.two') }}" class="btn-link">
+                            <a href="{{ route('restaurant.two') }}" class="btn-link">
                                 <span>Read More</span>
 
                                 <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>

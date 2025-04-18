@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/meal.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/css/meal.css') }}">
     
     <title>MEANU</title>
 </head>
@@ -16,34 +16,31 @@
         <a href="#Home" class="logo">Foodie<span class="span">.</span></a>
       </h1>
 
+      
       <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li class="nav-item">
-            <a href="meal.html" class="navbar-link" data-nav-link>Menu</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          
-
-          <li class="nav-item">
-            <a href="#about" class="navbar-link" data-nav-link>Sale 50% </a>
-          </li>
-
-         
-
-          <li class="nav-item">
-            <a href="Book-Table.html" class="navbar-link" data-nav-link>Book-Table</a>
-          </li>
-          <li class="nav-item">
-            <a href="log-in.html" class="navbar-link" data-nav-link>Sing up</a>
-          </li>
-
-        </ul>
-      </nav>
+            <ul class="navbar-list">
+        
+                <li class="nav-item">
+                    <a href="{{ route('home') }}" class="navbar-link" data-nav-link>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('menu') }}" class="navbar-link" data-nav-link>Menu</a>
+                </li>
+        
+                <li class="nav-item">
+                    <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
+                </li>
+        
+        
+                <li class="nav-item">
+                    <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
+                </li>
+        
+            </ul>
+        </nav>
 
       <div class="header-btn-group">
         <button class="search-btn" aria-label="Search" data-search-btn>
@@ -107,7 +104,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-1.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-1.png') }}" width="300" height="300" loading="lazy') }}" 
                     alt="Fried Chicken Unlimited" class="w-100">
 
                   <div class="badge">-15%</div>
@@ -146,7 +143,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-2.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-2.png') }}" width="300" height="300" loading="lazy"
                     alt="Burger King Whopper" class="w-100">
 
                   <div class="badge">-10%</div>
@@ -185,7 +182,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-3.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-3.png') }}" width="300" height="300" loading="lazy"
                     alt="White Castle Pizzas" class="w-100">
 
                   <div class="badge">-25%</div>
@@ -224,7 +221,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-4.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-4.png') }}" width="300" height="300" loading="lazy"
                     alt="Bell Burrito Supreme" class="w-100">
 
                   <div class="badge">-20%</div>
@@ -263,7 +260,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-5.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-5.png') }}" width="300" height="300" loading="lazy"
                     alt="Kung Pao Chicken BBQ" class="w-100">
 
                   <div class="badge">-5%</div>
@@ -302,7 +299,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-6.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-6.png') }}" width="300" height="300" loading="lazy"
                     alt="Wendy's Chicken" class="w-100">
 
                   <div class="badge">-15%</div>
@@ -364,7 +361,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-1.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-1.png') }}" width="300" height="300" loading="lazy"
                     alt="Fried Chicken Unlimited" class="w-100">
 
                   <div class="badge">-15%</div>
@@ -403,7 +400,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-2.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-2.png') }}" width="300" height="300" loading="lazy"
                     alt="Burger King Whopper" class="w-100">
 
                   <div class="badge">-10%</div>
@@ -442,7 +439,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/sandwich_cheese.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/sandwich_cheese.png') }}" width="300" height="300" loading="lazy"
                     alt="White Castle Pizzas" class="w-100">
 
                   <div class="badge">-25%</div>
@@ -481,7 +478,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/club_sandwich.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/club_sandwich.png') }}" width="300" height="300" loading="lazy"
                     alt="Bell Burrito Supreme" class="w-100">
 
                   <div class="badge">-20%</div>
@@ -520,7 +517,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/food-menu-6.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/food-menu-6.png') }}" width="300" height="300" loading="lazy"
                     alt="Kung Pao Chicken BBQ" class="w-100">
 
                   <div class="badge">-5%</div>
@@ -559,7 +556,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/chicken_burger.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/chicken_burger.png') }}" width="300" height="300" loading="lazy"
                     alt="Wendy's Chicken" class="w-100">
 
                   <div class="badge">-15%</div>
@@ -622,7 +619,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="assets/images/menu ber/burger_bbq.png" width="350" height="350" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/burger_bbq.png') }}" width="350" height="350" loading="lazy"
                     alt="Fried Chicken Unlimited" class="w-100">
 
                   <div class="badge">-15%</div>
@@ -661,7 +658,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/burger_duble.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/burger_duble.png') }}" width="300" height="300" loading="lazy"
                     alt="Burger King Whopper" class="w-100">
 
                   <div class="badge">-10%</div>
@@ -700,7 +697,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/chicken_burger.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/chicken_burger.png') }}" width="300" height="300" loading="lazy"
                     alt="White Castle Berger" class="w-100">
 
                   <div class="badge">-25%</div>
@@ -739,7 +736,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/club_sandwich.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/club_sandwich.png') }}" width="300" height="300" loading="lazy"
                     alt="Bell Berger Supreme" class="w-100">
 
                   <div class="badge">-20%</div>
@@ -778,7 +775,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/hamburger.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/hamburger.png') }}" width="300" height="300" loading="lazy"
                     alt="Berger" class="w-100">
 
                   <div class="badge">-5%</div>
@@ -817,7 +814,7 @@
               <div class="food-menu-card">
 
                 <div class="card-banner">
-                  <img src="./assets/images/menu ber/hamburger.png" width="300" height="300" loading="lazy"
+                  <img src="{{ asset('assets/img/images/menu ber/hamburger.png') }}" width="300" height="300" loading="lazy"
                     alt="Wendy's Berger" class="w-100">
 
                   <div class="badge">-15%</div>
@@ -870,7 +867,7 @@
 
   <footer class="footer">
 
-    <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
+    <div class="footer-top" style="background-image: url('{{ asset('assets/img/footer-illustration.png') }}">
       <div class="container">
 
         <div class="footer-brand">
@@ -976,7 +973,7 @@
     <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+  <script src="{{ asset('assets/js/js/script.js') }}" defer></script>
 
   <!-- 
     - ionicon link

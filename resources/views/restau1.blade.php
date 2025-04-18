@@ -9,33 +9,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
   <meta name="keywords" content="" />
-  <meta name="description" content="" />
+<meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="./assets/imagesRes1/favicon.png" type="">
+  <link rel="shortcut icon" href="{{ asset('assets/img/imagesRes1/favicon.png') }}" type="">
 
   <title> Feane </title>
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="./assets/css1/bootstrap.css" />
+  <link rel="stylesheet" href="{{ asset('assets/css/css1/bootstrap.min.css') }}">
 
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- nice select  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
   <!-- font awesome style -->
-  <link href="./assets/css1/font-awesome.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="{{ asset('assets/css/css1/font-awesome.min.css') }}">
   <!-- Custom styles for this template -->
-  <link href="./assets/css1/style.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{ asset('assets/css/css1/style.css') }}">
   <!-- responsive style -->
-  <link href="./assets/css1/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ asset('assets/css/css1/responsive.css') }}">
+
 
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{{ asset('assets/css//css1/style.css') }}">
 
   <!-- 
     - google font link
@@ -60,34 +61,30 @@
       </h1>
 
       <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li class="nav-item">
-            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="Restaurantes.html" class="navbar-link" data-nav-link>Restaurant</a>
-          </li>
-          <li class="nav-item">
-            <a href="meal.html" class="navbar-link" data-nav-link>Menu</a>
-          </li>
-
-
-          <li class="nav-item">
-            <a href="#about" class="navbar-link" data-nav-link>Sale 50% </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="Book-Table.html" class="navbar-link" data-nav-link>Book-Table</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="log-in.html" class="navbar-link" data-nav-link>Sing up</a>
-          </li>
-
-
-        </ul>
-      </nav>
+            <ul class="navbar-list">
+        
+                <li class="nav-item">
+                    <a href="{{ route('home') }}" class="navbar-link" data-nav-link>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('menu') }}" class="navbar-link" data-nav-link>Menu</a>
+                </li>
+        
+                <li class="nav-item">
+                    <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
+                </li>
+        
+               
+        
+                <li class="nav-item">
+                    <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
+                </li>
+        
+            </ul>
+        </nav>
 
       <div class="header-btn-group">
         <button class="search-btn" aria-label="Search" data-search-btn>
@@ -99,7 +96,7 @@
         <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
           <span class="line top"></span>
           <span class="line middle"></span>
-          <span class="line bottom"></span>
+    <span class="line bottom"></span>
         </button>
       </div>
 
@@ -131,7 +128,7 @@
         - #HERO
       -->
 
-      <section class="hero" id="home" style="background-image: url('./assets/images/hero-bg.jpg')">
+      <section class="hero" id="home" style="background-image: url('{{ asset('assets/img/images/hero-bg.jpg') }}">
         <div class="container">
 
           <div class="hero-content">
@@ -147,10 +144,10 @@
           </div>
 
           <figure class="hero-banner">
-            <img src="./assets/images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
+            <img src="{{ asset('assets/img/images/hero-banner-bg.png') }}" width="820" height="716" alt="" aria-hidden="true"
               class="w-100 hero-img-bg">
 
-            <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Burger"
+            <img src="{{ asset('assets/img/images/hero-banner.png') }}" width="700" height="637" loading="lazy" alt="Burger"
               class="w-100 hero-img">
           </figure>
 
@@ -166,7 +163,7 @@
           <div class="col-md-6  ">
             <div class="box ">
               <div class="img-box">
-                <img src="assets/imagesRest1/o1.jpg" alt="">
+                <img src="{{ asset('assets/img/imagesRest1/o1.jpg') }}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -235,7 +232,7 @@
           <div class="col-md-6  ">
             <div class="box ">
               <div class="img-box">
-                <img src="assets/imagesRest1/o2.jpg" alt="">
+                <img src="{{ asset('assets/img/imagesRest1/o2.jpg') }}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -332,7 +329,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f1.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f1.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -408,7 +405,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f2.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f2.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -484,7 +481,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f3.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f3.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -560,7 +557,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f4.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f4.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -636,7 +633,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f5.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f5.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -712,7 +709,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f6.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f6.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -788,7 +785,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f7.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f7.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -864,7 +861,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f8.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f8.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -940,7 +937,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="assets/imagesRest1/f9.png" alt="">
+                  <img src="{{ asset('assets/img/imagesRest1/f9.png') }}" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -1032,7 +1029,7 @@
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="assets/imagesRest1/about-img.png" alt="">
+            <img src="{{ asset('assets/img/imagesRest1/about-img.png') }}" alt="">
           </div>
         </div>
         <div class="col-md-6">
@@ -1084,7 +1081,7 @@
                 </p>
               </div>
               <div class="img-box">
-                <img src="assets/imagesRest1/client1.jpg" alt="" class="box-img">
+                <img src="{{ asset('assets/img/imagesRest1/client1.jpg') }}" alt="" class="box-img">
               </div>
             </div>
           </div>
@@ -1102,7 +1099,7 @@
                 </p>
               </div>
               <div class="img-box">
-                <img src="assets/imagesRest1/client2.jpg" alt="" class="box-img">
+                <img src="{{ asset('assets/img/imagesRest1/client2.jpg') }}" alt="" class="box-img">
               </div>
             </div>
           </div>
@@ -1196,12 +1193,12 @@
   <!-- footer section -->
 
   <!-- jQery -->
-  <script src="./assets/js1/jquery-3.4.1.min.js"></script>
+  <script src="{{ asset('assets/js/js1/jquery-3.4.1.min.js') }}"></script>
   <!-- popper js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
   <!-- bootstrap js -->
-  <script src="./assets/js1/bootstrap.js"></script>
+  <script src="{{ asset('assets/js/js1/bootstrap.js') }}"></script>
   <!-- owl slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
@@ -1210,7 +1207,7 @@
   <!-- nice select -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
   <!-- custom js -->
-  <script src="./assets/js1/custom.js"></script>
+  <script src="{{ asset('assets/js/js1/custom.js') }}"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>

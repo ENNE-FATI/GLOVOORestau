@@ -61,9 +61,7 @@
             <li class="nav-item">
                 <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
             </li>
-            <li class="nav-item">
-                <a href="{{ route('book-table') }}" class="navbar-link" data-nav-link>Book-Table</a>
-            </li>
+           
             <li class="nav-item">
                 <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
             </li>
@@ -535,145 +533,145 @@
             <ul class="blog-list">
 
 
-                <li>
-                    <div class="blog-card">
+<li>
+    <div class="blog-card">
 
-                        <div class="card-banner">
-                            <img src="{{ asset('assets/img/images/blog-2.jpg') }}" width="600" height="390" loading="lazy"
-                            alt="Making Chicken Strips With New Delicious Ingridents." class="w-100">
+        <div class="card-banner">
+            <img src="{{ asset('assets/img/images/blog-2.jpg') }}" width="600" height="390" loading="lazy"
+                alt="Making Chicken Strips With New Delicious Ingridents." class="w-100">
 
-                            <div class="badge"> Feane</div>
-                        </div>
+            <div class="badge"> Feane</div>
+        </div>
 
-                        <div class="card-content">
+        <div class="card-content">
 
-                            <div class="card-meta-wrapper">
-
-
-
-                                <a href="Restau1.html" class="card-meta-link">
-                                    <ion-icon name="fast-food-outline"></ion-icon>
-                                    <p class="meta-info">Feane</p>
-
-                                </a>
-
-                                <h3 class="h3">
-                                    <a href="Restau1.html" class="card-title">Delicious Dishes at Feane: A Unique Dining
-                                        Experience</a>
-                                </h3>
-
-                                <p class="card-text">
-                                    Savor the flavors of Feane, with fresh, locally sourced ingredients for a memorable
-                                    dining experience.
-                                </p>
+            <div class="card-meta-wrapper">
 
 
 
-                                <a href="Restau1.html" class="btn-link">
-                                    <span>Read More</span>
+                <a href="{{ route('restaurant.one') }}" class="card-meta-link">
+               
+                    <ion-icon name="fast-food-outline"></ion-icon>
+                    <p class="meta-info">Feane</p>
 
-                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                                </a>
+                </a>
 
-                            </div>
+                <h3 class="h3">
+                    <a href="{{ route('restaurant.one') }}"  class="card-title">Delicious Dishes at Feane: A Unique Dining
+                        Experience</a>
+                </h3>
 
-                        </div>
-                </li>
-                <li>
-                    <div class="blog-card">
-
-                        <div class="card-banner">
-                            <img src="{{ asset('assets/img/images/blog-1.jpg') }}" width="600" height="390" loading="lazy"
-                                alt="Making Chicken Strips With New Delicious Ingridents." class="w-100">
-
-                            <div class="badge">Dingo</div>
-                        </div>
-
-                        <div class="card-content">
-
-                            <div class="card-meta-wrapper">
+                <p class="card-text">
+                    Savor the flavors of Feane, with fresh, locally sourced ingredients for a memorable
+                    dining experience.
+                </p>
 
 
 
-                                <a href="Restau2.html" class="card-meta-link">
-                                    <ion-icon name="restaurant-outline"></ion-icon>
+                <a href="{{ route('restaurant.one') }}"  class="btn-link">
+                    <span>Read More</span>
 
-                                    <p class="meta-info">Dingo</p>
-                                </a>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
 
-                            </div>
+            </div>
 
-                            <h3 class="h3">
-                                <a href="Restau2.html" class="card-title">Making Chicken Strips With New Delicious
-                                    Ingridents.</a>
-                            </h3>
+        </div>
+</li>
+<li>
+    <div class="blog-card">
 
-                            <p class="card-text">
-                                Financial experts support or help you to to find out which way you can raise your funds
-                                more...
-                            </p>
+        <div class="card-banner">
+            <img src="{{ asset('assets/img/images/blog-1.jpg') }}"width="600" height="390" loading="lazy"
+                alt="Making Chicken Strips With New Delicious Ingridents." class="w-100">
 
-                            <a href="Restau2.html" class="btn-link">
-                                <span>Read More</span>
+            <div class="badge">Dingo</div>
+        </div>
 
-                                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                            </a>
+        <div class="card-content">
 
-                        </div>
-
-                    </div>
-                </li>
-
-
-                <li>
-                    <div class="blog-card">
-
-                        <div class="card-banner">
-                            <img src="{{ asset('assets/img/images/blog-3.jpg') }}" width="600" height="390" loading="lazy"
-                                alt="Innovative Hot Chessyraw Pasta Make Creator Fact." class="w-100">
-
-                            <div class="badge">Bistro Soleil</div>
-                        </div>
-
-                        <div class="card-content">
-
-                            <div class="card-meta-wrapper">
+            <div class="card-meta-wrapper">
 
 
 
-                                <a href="restaurent3.html" class="card-meta-link">
-                                    <ion-icon name="fast-food-outline"></ion-icon>
+                <a href="{{ route('restaurant.two') }}" class="card-meta-link">
+               
+                    <ion-icon name="restaurant-outline"></ion-icon>
+
+                    <p class="meta-info">Dingo</p>
+                </a>
+
+            </div>
+
+            <h3 class="h3">
+                <a href="{{ route('restaurant.two') }}" class="card-title">Making Chicken Strips With New Delicious
+                    Ingridents.</a>
+            </h3>
+
+            <p class="card-text">
+                Financial experts support or help you to to find out which way you can raise your funds
+                more...
+            </p>
+
+            <a href=href="{{ route('restaurant.two') }}" class="btn-link">
+                <span>Read More</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+</li>
 
 
-                                    <p class="meta-info">Bistro Soleil</p>
-                                </a>
+<li>
+    <div class="blog-card">
 
-                            </div>
+        <div class="card-banner">
+            <img src="{{ asset('assets/img/images/blog-3.jpg') }}"  width="600" height="390" loading="lazy"
+                alt="Innovative Hot Chessyraw Pasta Make Creator Fact." class="w-100">
 
-                            <h3 class="h3">
-                                <a href="restaurent3.html" class="card-title">Bistro Soleil: A Taste of Authentic French
-                                    Cuisine</a>
-                            </h3>
+            <div class="badge">Bistro Soleil</div>
+        </div>
 
-                            <p class="card-text">
-                                Experience exquisite French cuisine at Bistro Soleil, with fresh, locally sourced
-                                ingredients and dishes for every taste.
-                            </p>
+        <div class="card-content">
 
+            <div class="card-meta-wrapper">
 
 
-                            <a href="restaurent3.html" class="btn-link">
-                                <span>Read More</span>
 
-                                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                            </a>
+                <a href="{{ route('restaurant.three') }}" class="card-meta-link">
+                    <ion-icon name="fast-food-outline"></ion-icon>
+                    <p class="meta-info">Bistro Soleil</p>
+                </a>
+            </div>
 
-                        </div>
+            <h3 class="h3">
+                <a href="{{ route('restaurant.three') }}" class="card-title">Bistro Soleil: A Taste of Authentic French
+                    Cuisine</a>
+            </h3>
 
-                    </div>
-                </li>
+            <p class="card-text">
+                Experience exquisite French cuisine at Bistro Soleil, with fresh, locally sourced
+                ingredients and dishes for every taste.
+            </p>
 
-            </ul>
+
+
+            <a href="{{ route('restaurant.three') }}" class="btn-link">
+                <span>Read More</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+</li>
+
+</ul>
+
 
         </div>
     </section>

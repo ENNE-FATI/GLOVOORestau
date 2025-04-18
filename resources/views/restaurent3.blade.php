@@ -34,9 +34,7 @@
                     <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
                 </li>
         
-                <li class="nav-item">
-                    <a href="{{ route('book-table') }}" class="navbar-link" data-nav-link>Book-Table</a>
-                </li>
+               
         
                 <li class="nav-item">
                     <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>

@@ -6,29 +6,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dingo</title>
-    <link rel="icon" href="assets/img2/favicon.png">
+    <link rel="icon" href="{{ asset('assets/img/img2/favicon.png') }}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css2/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/bootstrap.min.css') }}">
     <!-- animate CSS -->
-    <link rel="stylesheet" href="assets/css2/animate.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/animate.css') }}">
     <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="assets/css2/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/owl.carousel.min.css') }}">
     <!-- themify CSS -->
-    <link rel="stylesheet" href="assets/css2/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/themify-icons.css') }}">
     <!-- flaticon CSS -->
-    <link rel="stylesheet" href="assets/css2/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/flaticon.css') }}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="assets/css2/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/magnific-popup.css') }}">
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="assets/css2/slick.css">
-    <link rel="stylesheet" href="assets/css2/gijgo.min.css">
-    <link rel="stylesheet" href="assets/css2/nice-select.css">
-    <link rel="stylesheet" href="assets/css2/all.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/gijgo.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/all.css') }}">
     <!-- style CSS -->
-    <link rel="stylesheet" href="assets/css2/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/css2/style.css') }}">
    
  
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{{ asset('assets/css/css/style.css') }}">
 
   <!-- 
     - google font link
@@ -52,33 +52,29 @@
     
           <nav class="navbar" data-navbar>
             <ul class="navbar-list">
-    
-              <li class="nav-item">
-                <a href="index.html" class="navbar-link" data-nav-link>Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="Restaurantes.html" class="navbar-link" data-nav-link>Restaurant</a>
-              </li>
-              <li class="nav-item">
-                <a href="meal.html" class="navbar-link" data-nav-link>Menu</a>
-              </li>
-    
-    
-              <li class="nav-item">
-                <a href="#about" class="navbar-link" data-nav-link>Sale 50% </a>
-              </li>
-    
-              <li class="nav-item">
-                <a href="Book-Table.html" class="navbar-link" data-nav-link>Book-Table</a>
-              </li>
-    
-              <li class="nav-item">
-                <a href="log-in.html" class="navbar-link" data-nav-link>Sing up</a>
-              </li>
-    
-    
+        
+                <li class="nav-item">
+                    <a href="{{ route('home') }}" class="navbar-link" data-nav-link>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('menu') }}" class="navbar-link" data-nav-link>Menu</a>
+                </li>
+        
+                <li class="nav-item">
+                    <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
+                </li>
+        
+               
+        
+                <li class="nav-item">
+                    <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
+                </li>
+        
             </ul>
-          </nav>
+        </nav>
     
           <div class="header-btn-group">
             <button class="search-btn" aria-label="Search" data-search-btn>
@@ -122,7 +118,7 @@
             - #HERO
           -->
     
-          <section class="hero" id="home" style="background-image: url('./assets/images/hero-bg.jpg')">
+          <section class="hero" id="home" style="background-image: url('{{ asset('assets/img/images/hero-bg.jpg') }}');">
             <div class="container">
     
               <div class="hero-content">
@@ -138,10 +134,10 @@
               </div>
     
               <figure class="hero-banner">
-                <img src="./assets/images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
+                <img  src="{{ asset('assets/img/images/hero-banner-bg.png') }}" width="820" height="716" alt="" aria-hidden="true"
                   class="w-100 hero-img-bg">
     
-                <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Burger"
+                <img src="{{ asset('assets/img/images/hero-banner.png') }}" width="700" height="637" loading="lazy" alt="Burger"
                   class="w-100 hero-img">
               </figure>
     
@@ -164,48 +160,48 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_blog_item">
                         <div class="single_blog_img">
-                            <img src="assets/img2/food_item/food_item_1.png" alt="">
+                          <img src="{{ asset('assets/img/img2/food_item/food_item_1.png') }}" alt="">
                         </div>
                         <div class="single_blog_text">
                             <h3>Indian Burger</h3>
                             <p>Was brean shed moveth day yielding tree yielding day were female and </p>
-                            <a href="#" class="btn_3">Read More <img src="assets/img2/icon/left_2.svg" alt=""></a>
+                            <a href="#" class="btn_3">Read More <img src="{{ asset('assets/img/img2/icon/left_2.svg') }}" alt=""></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_blog_item">
                         <div class="single_blog_img">
-                            <img src="assets/img2/food_item/food_item_2.png" alt="">
+                            <img src="{{ asset('assets/img/img2/food_item/food_item_2.png') }}" alt="">
                         </div>
                         <div class="single_blog_text">
                             <h3>Cremy Noodles</h3>
                             <p>Was brean shed moveth day yielding tree yielding day were female and </p>
-                            <a href="#" class="btn_3">Read More <img src="assets/img2/icon/left_2.svg" alt=""></a>
+                            <a href="#" class="btn_3">Read More <img src="{{ asset('assets/img/img2/icon/left_2.svg') }}" alt=""></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_blog_item">
                         <div class="single_blog_img">
-                            <img src="assets/img2/food_item/food_item_3.png" alt="">
+                            <img src="{{ asset('assets/img/img2/food_item/food_item_3.png') }}" alt="">
                         </div>
                         <div class="single_blog_text">
                             <h3>Honey Meat</h3>
                             <p>Was brean shed moveth day yielding tree yielding day were female and </p>
-                            <a href="#" class="btn_3">Read More <img src="assets/img2/icon/left_2.svg" alt=""></a>
+                            <a href="#" class="btn_3">Read More <img src="{{ asset('assets/img/img2/icon/left_2.svg') }}" alt=""></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 d-none d-sm-block d-lg-none">
                     <div class="single_blog_item">
                         <div class="single_blog_img">
-                            <img src="assets/img2/food_item/food_item_1.png" alt="">
+                            <img src="{{ asset('assets/img/img2/food_item/food_item_1.png') }}" alt="">
                         </div>
                         <div class="single_blog_text">
                             <h3>Cremy Noodles</h3>
                             <p>Was brean shed moveth day yielding tree yielding day were female and </p>
-                            <a href="#" class="btn_3">Read More <img src="assets/img2/icon/left_2.svg" alt=""></a>
+                            <a href="#" class="btn_3">Read More <img src="assets/img/img2/icon/left_2.svg') }}" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -220,7 +216,7 @@
             <div class="row align-items-center">
                 <div class="col-sm-4 col-lg-5 offset-lg-1">
                     <div class="about_img">
-                        <img src="assets/img2/about.png" alt="">
+                        <img src="{{ asset('assets/img/img2/about.png') }}" alt="">
                     </div>
                 </div>
                 <div class="col-sm-8 col-lg-4">
@@ -232,7 +228,7 @@
                         <p>May over was. Be signs two. Spirit. Brought said dry own firmament lesser best sixth deep
                             abundantly bearing, him, gathering you
                             blessed bearing he our position best ticket in month hole deep </p>
-                        <a href="#" class="btn_3">Read More <img src="assets/img2/icon/left_2.svg" alt=""></a>
+                        <a href="#" class="btn_3">Read More <img src="{{ asset('assets/img/img2/icon/left_2.svg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -255,16 +251,16 @@
                 <div class="col-lg-6">
                     <div class="nav nav-tabs food_menu_nav" id="myTab" role="tablist">
                         <a class="active" id="Special-tab" data-toggle="tab" href="#Special" role="tab"
-                            aria-controls="Special" aria-selected="false">Special <img src="assets/img2/icon/play.svg"
-                                alt="play"></a>
+                            aria-controls="Special" aria-selected="false">Special <img src="{{ asset('assets/img/img2/icon/play.svg
+                               ') }}" alt=""></a>
                         <a id="Breakfast-tab" data-toggle="tab" href="#Breakfast" role="tab" aria-controls="Breakfast"
-                            aria-selected="false">Breakfast <img src="assets/img2/icon/play.svg" alt="play"></a>
+                            aria-selected="false">Breakfast <img src="{{ asset('assets/img/img2/icon/play.svg') }}" alt=""></a>
                         <a id="Launch-tab" data-toggle="tab" href="#Launch" role="tab" aria-controls="Launch"
-                            aria-selected="false">Launch <img src="assets/img2/icon/play.svg" alt="play"></a>
+                            aria-selected="false">Launch <img src="{{ asset('assets/img/img2/icon/play.svg') }}" alt=""></a>
                         <a id="Dinner-tab" data-toggle="tab" href="#Dinner" role="tab" aria-controls="Dinner"
-                            aria-selected="false">Dinner <img src="assets/img2/icon/play.svg" alt="play"> </a>
+                            aria-selected="false">Dinner <img src="{{ asset('assets/img/img2/icon/play.svg') }}" alt=""> </a>
                         <a id="Sneaks-tab" data-toggle="tab" href="#Sneaks" role="tab" aria-controls="Sneaks"
-                            aria-selected="false">Sneaks <img src="assets/img2/icon/play.svg" alt="play"></a>
+                            aria-selected="false">Sneaks <img src="{{ asset('assets/img/img2/icon/play.svg') }}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -274,7 +270,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_1.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_1.png ') }}" class="mr-3" alt="">
                                         <div class="media-body align-self-center">
                                             <h3>Pork Sandwich</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -282,7 +278,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_2.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_2.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Roasted Marrow</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -290,7 +286,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_3.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_3.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Summer Cooking</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -300,7 +296,7 @@
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_4.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_4.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Easter Delight</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -308,7 +304,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_5.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_5.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Tiener Schnitze</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -316,7 +312,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_6.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_6.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Chicken Roast</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -331,7 +327,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_4.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_4.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Easter Delight</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -339,7 +335,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_5.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_5.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Tiener Schnitze</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -347,7 +343,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_6.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_6.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Chicken Roast</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -357,7 +353,7 @@
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_1.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_1.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Pork Sandwich</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -365,7 +361,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_2.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_2.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Roasted Marrow</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -373,7 +369,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_3.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_3.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Summer Cooking</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -388,7 +384,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_1.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_1.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Pork Sandwich</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -396,7 +392,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_2.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_2.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Roasted Marrow</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -404,7 +400,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_3.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_3.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Summer Cooking</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -414,7 +410,7 @@
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_4.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_4.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Easter Delight</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -422,7 +418,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_5.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_5.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Tiener Schnitze</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -430,7 +426,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_6.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_6.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Chicken Roast</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -446,7 +442,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_4.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_4.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Easter Delight</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -454,7 +450,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_5.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_5.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Tiener Schnitze</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -462,7 +458,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_6.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_6.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Chicken Roast</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -472,7 +468,7 @@
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_1.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_1.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Pork Sandwich</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -480,7 +476,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_2.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_2.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Roasted Marrow</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -488,7 +484,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_3.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_3.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Summer Cooking</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -504,7 +500,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_1.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_1.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Pork Sandwich</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -512,7 +508,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_2.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_2.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Roasted Marrow</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -520,7 +516,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_3.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_3.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Summer Cooking</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -530,7 +526,7 @@
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_4.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_4.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Easter Delight</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -538,7 +534,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_5.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_5.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Tiener Schnitze</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -546,7 +542,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="assets/img2/food_menu/single_food_6.png" class="mr-3" alt="...">
+                                        <img src="{{ asset('assets/img/img2/food_menu/single_food_6.png') }}" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Chicken Roast</h3>
                                             <p>They're wherein heaven seed hath nothing</p>
@@ -640,25 +636,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- jquery plugins here-->
     <!-- jquery -->
-    <script src="assets/js2/jquery-1.12.1.min.js"></script>
-    <!-- popper js -->
-    <script src="assets/js2/popper.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="assets/js2/bootstrap.min.js"></script>
-    <!-- easing js -->
-    <script src="assets/js2/jquery.magnific-popup.js"></script>
-    <!-- swiper js -->
-    <script src="assets/js2/swiper.min.js"></script>
-    <!-- swiper js -->
-    <script src="assets/js2/masonry.pkgd.js"></script>
-    <!-- particles js -->
-    <script src="assets/js2/owl.carousel.min.js"></script>
-    <!-- swiper js -->
-    <script src="assets/js2/slick.min.js"></script>
-    <script src="assets/js2/gijgo.min.js"></script>
-    <script src="assets/js2/jquery.nice-select.min.js"></script>
-    <!-- custom js -->
-    <script src="assets/js2/custom.js"></script>
+    <script src="{{ asset('assets/js/jquery-1.12.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/popper.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.js') }}"></script>
+<script src="{{ asset('assets/js/swiper.min.js') }}"></script>
+<script src="{{ asset('assets/js/masonry.pkgd.js') }}"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script src="{{ asset('assets/js/gijgo.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.nice-select.min.js') }}"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+
 </body>
 
 </html>
