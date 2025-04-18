@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OrderController;
 
 
 Route::get('/', function () {
@@ -57,6 +58,17 @@ Route::post('/signin', [AuthController::class, 'login'])->name('signin');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth')->name('dashboard');
+
+
+
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/order', [OrderController::class, 'create'])->name('order.create');
+    Route::post('/order', [OrderController::class, 'store'])->name('order.store');
+    Route::get('/order/track/{order}', [OrderController::class, 'track'])->name('order.track');
+});
 
 
 // Route for the "Sale 50%" link. Since it's an anchor link (#about),
