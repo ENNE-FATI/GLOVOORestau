@@ -24,6 +24,25 @@ Route::get('/book-table', function () {
 Route::get('/log-in', function () {
     return view('log-in');
 })->name('sign-up');
+Route::get('/synapse', [AuthController::class, 'showSynapseForm'])->name('synapse.form');
+Route::post('/synapse', [AuthController::class, 'handleSynapseForm'])->name('synapse.submit');
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login.form');
+
+// Route POST pour traiter la soumission du formulaire de connexion
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+// Route GET pour afficher la page du tableau de bord après la connexion
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+// Route POST pour se déconnecter
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/restaurant/1', function () {
     return view('restau1');

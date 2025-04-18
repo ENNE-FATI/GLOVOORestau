@@ -1,63 +1,104 @@
 <?php
+
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
-    // Afficher le formulaire d'inscription
-    public function showSignupForm()
-    {
-        return view('signup');
+    // Méthode pour se connecter
+    public function login(Request $request)
+{
+    // Validation des données saisies
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
+
+    // Vérification si l'utilisateur existe avec l'email
+    $user = User::where('email', $request->email)->first();
+
+    // Si l'utilisateur existe et que le mot de passe est correct
+    if ($user && Hash::check($request->password, $user->password)) {
+        // Connexion de l'utilisateur
+        Auth::login($user);
+
+        // Redirection vers la page du tableau de bord
+        return redirect()->route('dashboard');
     }
 
-    // Enregistrer un nouvel utilisateur
-    public function register(Request $request)
+    // Si l'utilisateur n'existe pas ou que le mot de passe est incorrect
+    return redirect()->back()->withErrors(['email' => 'Cet utilisateur n\'existe pas. Créez d\'abord un compte.']);
+}
+
+    // Afficher le formulaire d'inscription (synapse)
+    public function showSynapseForm(Request $request)
+    {
+        // Récupérer l'email de la session
+        $email = session('email');
+        
+        // Vérification si l'email est présent dans la session
+        if (!$email) {
+            return redirect()->route('home')->withErrors(['email' => 'Email non trouvé dans la session']);
+        }
+
+        // Retourner la vue avec l'email pour l'affichage dans le formulaire
+        return view('auth.synapse', compact('email'));
+    }
+
+    // Traiter le formulaire d'inscription (création du compte)
+    public function handleSynapseForm(Request $request)
     {
         // Validation des données du formulaire
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|confirmed|min:6',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|confirmed|min:6',
         ]);
 
-        // Création de l'utilisateur
+        // Créer l'utilisateur dans la base de données
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => Hash::make($validated['password']),
         ]);
 
-        // Connexion automatique après l'inscription
+        // Authentifier automatiquement l'utilisateur
         Auth::login($user);
 
-        return redirect()->route('home')->with('success', 'Account created and logged in!');
+        // Rediriger vers la page d'accueil ou tableau de bord après l'inscription
+        return redirect()->route('welcome');
     }
 
-    // Afficher le formulaire de connexion
-    public function showSigninForm()
+    // Méthode pour afficher la page d'accueil (Welcome)
+    public function welcome()
     {
-        return view('signin');
+        return view('welcome'); // Assurez-vous que la vue 'welcome.blade.php' existe
     }
 
-    // Connexion d'un utilisateur existant
-    public function login(Request $request)
-    {
-        // Validation des données du formulaire
-        $request->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
-        ]);
+    public function signin(Request $request)
+{
+    // Récupérer les informations de connexion
+    $credentials = $request->only('email', 'password');
 
-        // Tentative de connexion
-        if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('home')->with('success', 'Welcome back!');
-        }
-
-        return back()->withErrors(['email' => 'These credentials do not match our records.']);
+    if (Auth::attempt($credentials)) {
+        // Si l'utilisateur existe, rediriger vers la page d'accueil
+        return redirect()->route('welcome');
     }
+
+    // Vérifier si l'email existe dans la base de données
+    $user = User::where('email', $request->email)->first();
+    
+    // Si l'utilisateur existe mais le mot de passe est incorrect
+    if ($user) {
+        return back()->withErrors(['password' => 'Mot de passe incorrect.']);
+    }
+
+    // Si l'utilisateur n'existe pas, afficher une alerte et guider vers la page de création de compte
+    return redirect()->route('synapse.form')->with('alert', 'Vous n\'avez pas de compte. Veuillez vous inscrire pour en créer un.');
+}
+
 }

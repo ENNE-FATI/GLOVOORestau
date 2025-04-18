@@ -20,11 +20,19 @@
 
                 <!--    signup                            -->
 
-                <form action="{{ route('signup') }}" method="POST" class="sign-up-form">
+                <form method="POST" action="{{ route('synapse.submit') }}" class="sign-up-form">
                     @csrf
                 
                     <h2 class="title">Sign up</h2>
-                
+                    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="name" placeholder="UserName" required>
@@ -55,7 +63,7 @@
                 
 <!--    login                            -->
 
-<form action="{{ route('signin') }}" method="POST" class="sign-in-form">
+<form action="{{ route('login') }}" method="POST" class="sign-in-form">
     @csrf
                     <h2 class="title">Sign in</h2>
                 
