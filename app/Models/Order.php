@@ -2,24 +2,36 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Order extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'user_id',
         'product_id',
-        'product_name',
+        'quantity',
         'total_price',
-        'delivery_address',
-        'status'
+        'status',
+        'order_number'
     ];
 
-    public function user()
+    protected $casts = [
+        'total_price' => 'decimal:2',
+    ];
+
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function product(): BelongsTo
+    {
+        return $this->belongsTo(Product::class);
+    }
+
+    public function scopeForUser($query, $user)
+    {
+        return $query->where('user_id', $user->id);
     }
 }

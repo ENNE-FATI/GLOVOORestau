@@ -53,7 +53,7 @@
                 <a href="{{ route('home') }}" class="navbar-link" data-nav-link>Home</a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurant</a>
+                <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurants</a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('menu') }}" class="navbar-link" data-nav-link>Menu</a>
@@ -61,10 +61,26 @@
             <li class="nav-item">
                 <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
             </li>
-           
-            <li class="nav-item">
-                <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
-            </li>
+            
+            @auth
+                <!-- Liens visibles uniquement quand connecté -->
+                <li class="nav-item">
+                    <a href="{{ route('dashboard') }}" class="navbar-link" data-nav-link>Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="navbar-link" style="background: none; border: none; cursor: pointer;" data-nav-link>
+                            Logout
+                        </button>
+                    </form>
+                </li>
+            @else
+                <!-- Liens visibles uniquement quand déconnecté -->
+                <li class="nav-item">
+                    <a href="{{ route('auth.page') }}" class="navbar-link" data-nav-link>Login/Signup</a>
+                </li>
+            @endauth
         </ul>
     </nav>
       <div class="header-btn-group">

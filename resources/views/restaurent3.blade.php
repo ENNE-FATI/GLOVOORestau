@@ -21,7 +21,7 @@
             <ul class="navbar-list">
         
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" class="navbar-link" data-nav-link>Home</a>
+                    <a href="{{ route('home') }}"class="navbar-link" data-nav-link>Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurant</a>
@@ -30,16 +30,11 @@
                     <a href="{{ route('menu') }}" class="navbar-link" data-nav-link>Menu</a>
                 </li>
         
+                
+                
                 <li class="nav-item">
-                    <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
-                </li>
-        
-               
-        
-                <li class="nav-item">
-                    <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
-                </li>
-        
+                  <a href="{{ route('auth.page') }}" class="navbar-link" data-nav-link>Login/Signup</a>
+              </li>
             </ul>
         </nav>
     
@@ -148,14 +143,7 @@
 
                   <div class="badge">-15%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -194,14 +182,7 @@
 
                   <div class="badge">-10%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -279,14 +260,7 @@
 
                   <div class="badge">-20%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -325,14 +299,7 @@
 
                   <div class="badge">-5%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -371,14 +338,7 @@
 
                   <div class="badge">-15%</div>
 
-                  <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -439,14 +399,7 @@
                   alt="Fried Chicken Unlimited" class="w-100">
                   <div class="badge">-15%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -485,14 +438,7 @@
 
                   <div class="badge">-10%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -531,14 +477,7 @@
 
                   <div class="badge">-25%</div>
 
-                  <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -576,14 +515,7 @@
                   alt="Bell Burrito Supreme" class="w-100">
                   <div class="badge">-20%</div>
 
-                  <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -622,14 +554,7 @@
 
                   <div class="badge">-5%</div>
 
-               <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -668,14 +593,7 @@
 
                   <div class="badge">-15%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -738,14 +656,7 @@
 
                   <div class="badge">-15%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -784,14 +695,7 @@
 
                   <div class="badge">-10%</div>
 
-                  <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -830,14 +734,7 @@
 
                   <div class="badge">-25%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -915,14 +812,7 @@
 
                   <div class="badge">-5%</div>
 
-                  <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">
@@ -961,14 +851,7 @@
 
                   <div class="badge">-15%</div>
 
-                 <!-- Remplacer chaque bouton "Order Now" par ceci : -->
-<form action="{{ route('order.create') }}" method="POST">
-  @csrf
-  <input type="hidden" name="product_id" value="1"> <!-- Mettez l'ID réel du produit -->
-  <input type="hidden" name="product_name" value="Product Name"> <!-- Nom du produit -->
-  <input type="hidden" name="product_price" value="49.00"> <!-- Prix du produit -->
-  <button type="submit" class="btn food-menu-btn">Order Now</button>
-</form>
+                  <button class="btn food-menu-btn">Order Now</button>
                 </div>
 
                 <div class="wrapper">

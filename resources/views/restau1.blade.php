@@ -73,15 +73,11 @@
                     <a href="{{ route('menu') }}" class="navbar-link" data-nav-link>Menu</a>
                 </li>
         
-                <li class="nav-item">
-                    <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
-                </li>
-        
                
         
                 <li class="nav-item">
-                    <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
-                </li>
+                  <a href="{{ route('auth.page') }}" class="navbar-link" data-nav-link>Login/Signup</a>
+              </li>
         
             </ul>
         </nav>

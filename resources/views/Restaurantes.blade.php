@@ -40,15 +40,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-        <style>
-            .restaurant-address {
-    font-size: 0.95rem;
-    color: #555;
-    margin-top: 0.8rem;
-    font-style: italic;
-}
-
-        </style>
 
 
 </head>
@@ -72,22 +63,20 @@
                         <a href="{{ route('restaurant') }}" class="navbar-link" data-nav-link>Restaurant</a>
                     </li>
             
-                    
+                   
             
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="navbar-link" data-nav-link>Home</a>
                     </li>
             
-                    <li class="nav-item">
-                        <a href="#about" class="navbar-link" data-nav-link>Sale 50%</a>
-                    </li>
+                  
             
                     <li class="nav-item">
                         <a href="{{ route('menu') }}" class="navbar-link" data-nav-link>Menu</a>
                     </li>
             
                     <li class="nav-item">
-                        <a href="{{ route('sign-up') }}" class="navbar-link" data-nav-link>Sing up</a>
+                        <a href="{{ route('auth.page') }}" class="navbar-link" data-nav-link>Login/Signup</a>
                     </li>
                 </ul>
             </nav>
@@ -216,6 +205,41 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="section section-divider white blog" id="blog">
         <div class="container">
             <h2 class="h2 section-title text-center">
@@ -264,13 +288,6 @@
                                     Savor the flavors of Feane, with fresh, locally sourced ingredients for a memorable
                                     dining experience.
                                 </p>
-                                <p class="restaurant-address">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                    123 Main Street, Casablanca, Morocco
-                                </p>
-    
-    
-                            </br>
 
 
 
@@ -318,15 +335,8 @@
                                 Financial experts support or help you to to find out which way you can raise your funds
                                 more...
                             </p>
-                            <p class="restaurant-address">
-                                <ion-icon name="location-outline"></ion-icon>
-                                123 Main Street, Casablanca, Morocco
-                            </p>
 
-
-                        </br>
-
-                            <a href="{{ route('restaurant.two') }}" class="btn-link">
+                            <a href=href="{{ route('restaurant.two') }}" class="btn-link">
                                 <span>Read More</span>
 
                                 <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
@@ -369,13 +379,7 @@
                                 Experience exquisite French cuisine at Bistro Soleil, with fresh, locally sourced
                                 ingredients and dishes for every taste.
                             </p>
-                            <p class="restaurant-address">
-                                <ion-icon name="location-outline"></ion-icon>
-                                123 Main Street, Casablanca, Morocco
-                            </p>
 
-
-                        </br>
 
 
                             <a href="{{ route('restaurant.three') }}" class="btn-link">
